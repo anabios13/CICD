@@ -1,6 +1,6 @@
 import unittest
 from calculator import Calculator
-#Test cases to test Calulator methods54
+#Test cases to test Calulator methods
 #You always create  a child class derived from unittest.TestCase
 class TestCalculator(unittest.TestCase):
   #setUp method is overridden from the parent class TestCase
