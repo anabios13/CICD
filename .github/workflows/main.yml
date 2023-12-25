@@ -1,0 +1,31 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+        
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+
+      - name: Run Tests
+        run: coverage run testCalculator.py
+
+      - name: Test peport
+        run: coverage report
+    
