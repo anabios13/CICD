@@ -24,6 +24,6 @@ jobs:
           architecture: 'x64'
 
       - name: Run Tests
-        run: testCalculator.py
+        run: python3 testCalculator.py
 
     
