@@ -24,8 +24,6 @@ jobs:
           architecture: 'x64'
 
       - name: Run Tests
-        run: coverage run testCalculator.py
+        run: testCalculator.py
 
-      - name: Test peport
-        run: coverage report
     
